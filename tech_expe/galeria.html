@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Galeria do Tech Experience 2027" />
+    <title>Tech Experience 2027 - Galeria</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Galeria de Fotos</h1>
+        <p>Registros e imagens das atividades do Tech Experience 2027.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="palestrantes.html">Palestrantes</a>
+        <a href="local.html">Local</a>
+        <a href="galeria.html" class="active">Galeria</a>
+        <a href="inscricao.html">Inscrição</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Fotos do Evento</h2>
+            <ul class="gallery-grid">
+                <li class="gallery-item">
+                    <figure>
+                        <a href="img/evento.jpg" target="_blank" rel="noopener">
+                            <img src="img/evento.jpg" alt="Conferência de tecnologia" />
+                        </a>
+                        <figcaption>Conferências e Palestras Principais</figcaption>
+                    </figure>
+                </li>
+
+                <li class="gallery-item">
+                    <figure>
+                        <a href="img/laboratorio.jpg" target="_blank" rel="noopener">
+                            <img src="img/laboratorio.jpg" alt="Estudantes em um laboratório de informática" />
+                        </a>
+                        <figcaption>Atividades Práticas nos Laboratórios</figcaption>
+                    </figure>
+                </li>
+
+                <li class="gallery-item">
+                    <figure>
+                        <a href="img/programador.jpg" target="_blank" rel="noopener">
+                            <img src="img/programador.jpg" alt="Desenvolvimento de software" />
+                        </a>
+                        <figcaption>Desenvolvimento de Software e Projetos</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tech Experience 2027 &bull; <button type="button" commandfor="creditos" command="show-modal">Créditos</button></p>
+        <dialog id="creditos">
+            <h2>Créditos de Imagens</h2>
+            <section>
+                <h3>evento.jpg</h3>
+                <p><strong>Arquivo:</strong> Wikimedia Technical Conference 2019</p>
+                <p><strong>Autor:</strong> Darenwelsh (CC BY-SA 4.0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Technical_Conference_2019_-_Lets_Talk.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+
+            <section>
+                <h3>laboratorio.jpg</h3>
+                <p><strong>Arquivo:</strong> Students working in computer lab</p>
+                <p><strong>Autor:</strong> Michael Surran (CC BY-SA 2.0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+
+            <section>
+                <h3>programador.jpg</h3>
+                <p><strong>Arquivo:</strong> ComputerProgrammer.jpg</p>
+                <p><strong>Origem:</strong> Pixabay / Wikimedia Commons (CC0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:ComputerProgrammer.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+            <button type="button" commandfor="creditos" command="close" class="btn-close">Fechar</button>
+        </dialog>
+    </footer>
+</body>
+</html>

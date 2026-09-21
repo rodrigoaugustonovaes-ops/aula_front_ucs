@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Inscrição para o Tech Experience 2027" />
+    <title>Tech Experience 2027 - Inscrição</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Inscrição</h1>
+        <p>Preencha os dados abaixo para se inscrever no Tech Experience 2027.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="palestrantes.html">Palestrantes</a>
+        <a href="local.html">Local</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="inscricao.html" class="active">Inscrição</a>
+    </nav>
+
+    <main>
+        <section class="info-modal-trigger">
+            <h2>Orientações para Inscrição</h2>
+            <button type="button" commandfor="aviso-inscricao" command="show-modal" class="btn-secondary">
+                Ver Orientações da Inscrição
+            </button>
+
+            <dialog id="aviso-inscricao" open>
+                <h2>Antes de Continuar</h2>
+                <p>A inscrição é gratuita e as vagas para algumas trilhas são limitadas.</p>
+                <p>
+                    Confira a <a href="programacao.html">programação completa</a> antes de selecionar
+                    sua atividade de maior interesse.
+                </p>
+                <p>
+                    Evento agendado para os dias
+                    <time datetime="2027-03-22">22</time> e
+                    <time datetime="2027-03-23">23 de março de 2027</time>.
+                </p>
+                <button type="button" commandfor="aviso-inscricao" command="close" class="btn-close">Fechar</button>
+            </dialog>
+        </section>
+
+        <form action="confirmacao.html" method="get" class="form-container">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <p class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo" autofocus />
+                </p>
+
+                <p class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" required placeholder="nome@exemplo.com" />
+                </p>
+
+                <section class="form-row">
+                    <p class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(11) 99999-9999"
+                            pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                            maxlength="15"
+                            inputmode="tel"
+                            required />
+                        <small>Formato: (11) 99999-9999</small>
+                    </p>
+
+                    <p class="form-group">
+                        <label for="cpf">CPF *</label>
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            placeholder="123.456.789-00"
+                            pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                            maxlength="14"
+                            inputmode="numeric"
+                            required />
+                        <small>Formato: 123.456.789-00</small>
+                    </p>
+                </section>
+
+                <section class="form-row">
+                    <p class="form-group">
+                        <label for="cep">CEP *</label>
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            placeholder="01234-567"
+                            pattern="[0-9]{5}-[0-9]{3}"
+                            maxlength="9"
+                            inputmode="numeric"
+                            required />
+                    </p>
+
+                    <p class="form-group">
+                        <label for="nascimento">Data de Nascimento</label>
+                        <input type="date" id="nascimento" name="nascimento" />
+                    </p>
+                </section>
+
+                <p class="form-group">
+                    <label for="instituicao">Instituição de Ensino</label>
+                    <input
+                        type="text"
+                        id="instituicao"
+                        name="instituicao"
+                        list="lista-instituicoes"
+                        placeholder="Digite ou escolha uma instituição"
+                        autocomplete="organization" />
+
+                    <datalist id="lista-instituicoes">
+                        <option value="Cruzeiro do Sul - São Miguel"></option>
+                        <option value="Cruzeiro do Sul - Anália Franco"></option>
+                        <option value="Cruzeiro do Sul - Liberdade"></option>
+                        <option value="Cruzeiro do Sul - Paulista"></option>
+                        <option value="Cruzeiro do Sul - Guarulhos"></option>
+                    </datalist>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Acadêmicas</legend>
+
+                <p class="form-group">
+                    <label for="curso">Curso *</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione seu curso...</option>
+                        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                        <option value="cc">Ciência da Computação</option>
+                        <option value="si">Sistemas de Informação</option>
+                        <option value="outro">Outro curso</option>
+                    </select>
+                </p>
+
+                <p class="form-group">
+                    <label>Período *</label>
+                    <span class="radio-group">
+                        <label><input type="radio" id="manha" name="periodo" value="manha" required /> Manhã</label>
+                        <label><input type="radio" id="noite" name="periodo" value="noite" /> Noite</label>
+                    </span>
+                </p>
+
+                <p class="form-group">
+                    <label for="horario-chegada">Horário Previsto de Chegada</label>
+                    <input
+                        type="time"
+                        id="horario-chegada"
+                        name="horario-chegada"
+                        min="08:00"
+                        max="21:30"
+                        step="900"
+                        value="19:00" />
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Áreas de Interesse</legend>
+
+                <p class="form-group">
+                    <label>Selecione os temas desejados:</label>
+                    <ul class="checkbox-grid">
+                        <li><label><input type="checkbox" id="web" name="interesse" value="web" /> Desenvolvimento Web</label></li>
+                        <li><label><input type="checkbox" id="ia" name="interesse" value="ia" /> Inteligência Artificial</label></li>
+                        <li><label><input type="checkbox" id="cloud" name="interesse" value="cloud" /> Computação em Nuvem</label></li>
+                        <li><label><input type="checkbox" id="seguranca" name="interesse" value="seguranca" /> Segurança da Informação</label></li>
+                    </ul>
+                </p>
+
+                <p class="form-group">
+                    <label for="atividade">Atividade de Maior Interesse</label>
+                    <select id="atividade" name="atividade">
+                        <optgroup label="Palestras">
+                            <option value="ia-dev">IA no desenvolvimento de software</option>
+                            <option value="cloud">Primeiros passos em computação em nuvem</option>
+                        </optgroup>
+                        <optgroup label="Oficinas">
+                            <option value="html">Construindo uma página Web sem frameworks</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Outras Informações</legend>
+
+                <p class="form-group">
+                    <label for="mensagem">O que você espera aprender no evento?</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva uma breve mensagem..."></textarea>
+                </p>
+
+                <p class="form-group">
+                    <label for="comprovante">Comprovante Acadêmico (opcional)</label>
+                    <input type="file" id="comprovante" name="comprovante" />
+                </p>
+
+                <p class="form-group checkbox-single">
+                    <label>
+                        <input type="checkbox" id="aceite" name="aceite" value="sim" required />
+                        Confirmo que os dados informados são corretos.
+                    </label>
+                </p>
+            </fieldset>
+
+            <p class="form-actions">
+                <button type="submit" class="btn-primary">Realizar Inscrição</button>
+                <button type="reset" class="btn-reset">Limpar Formulário</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Tech Experience 2027 &bull; <a href="index.html">Voltar para a página inicial</a></p>
+    </footer>
+</body>
+</html>

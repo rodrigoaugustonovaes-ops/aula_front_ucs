@@ -1,0 +1,647 @@
+:root {
+    --cor-fundo: #f8fafc;
+    --cor-fundo-card: #ffffff;
+    --cor-header-inicio: #0f172a; /* Azul escuro */
+    --cor-header-fim: #312e81; /* Roxo profundo */
+    --cor-primaria: #4f46e5; /* Índigo */
+    --cor-primaria-hover: #4338ca;
+    --cor-secundaria: #e0e7ff; /* Índigo bem claro (fundos e hovers) */
+    --cor-texto-principal: #1e293b;
+    --cor-texto-suave: #475569;
+    --cor-borda: #e2e8f0;
+    --fonte-principal: system-ui, -apple-system, sans-serif;
+    --raio-borda: 8px;
+    --largura-maxima: 850px;
+}
+
+/* ==========================================================================
+   Reset Básico
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   Cabeçalho e Navegação
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, var(--cor-header-inicio), var(--cor-header-fim));
+    color: #ffffff;
+    text-align: center;
+    padding: 48px 24px;
+}
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--cor-fundo-card);
+    border-bottom: 1px solid var(--cor-borda);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-texto-suave);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+nav a.active {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Estrutura Principal e Cartões (Sections)
+   ========================================================================== */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: var(--largura-maxima);
+    margin: 0 auto;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+section, aside, .form-container {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    padding: 32px;
+}
+
+h2 {
+    font-size: 22px;
+    color: var(--cor-texto-principal);
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   Página: Início (Index)
+   ========================================================================== */
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--raio-borda);
+    display: block;
+    margin-top: 16px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+    margin-top: 12px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    list-style: none;
+}
+
+.cards-grid li {
+    border: 1px solid var(--cor-borda);
+    padding: 16px;
+    border-radius: var(--raio-borda);
+    border-left: 4px solid var(--cor-primaria);
+    font-weight: 500;
+}
+
+.step-list {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+aside {
+    background-color: var(--cor-secundaria);
+    border-color: #c7d2fe;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+/* Botões */
+.btn-link, .btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--raio-borda);
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    transition: background-color 0.2s;
+    font-family: inherit;
+}
+
+.btn-link, .btn-primary {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
+
+.btn-link:hover, .btn-primary:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+.btn-secondary:hover {
+    background-color: #c7d2fe;
+}
+
+/* ==========================================================================
+   Página: Programação (Tabelas e Barras de Progresso)
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+caption {
+    text-align: left;
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+    margin-bottom: 12px;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid var(--cor-borda);
+    text-align: left;
+}
+
+th {
+    background-color: var(--cor-fundo);
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+}
+
+tfoot td {
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+    text-align: center;
+}
+
+/* Listas de métricas / progress bar */
+.metrics-grid {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.metric-item label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+progress {
+    flex: 1;
+    height: 10px;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--cor-borda);
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #10b981; /* Verde */
+    border-radius: 5px;
+}
+
+.progress-wrap span {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Legenda */
+.legend-list dt {
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-top: 16px;
+}
+
+.legend-list dd {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   Página: Palestrantes (Accordions)
+   ========================================================================== */
+details {
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    margin-bottom: 16px;
+    overflow: hidden;
+    background-color: var(--cor-fundo-card);
+}
+
+summary {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    padding: 16px;
+    cursor: pointer;
+    list-style: none; /* Remove seta padrão em alguns navegadores */
+    display: flex;
+    align-items: center;
+}
+
+summary::before {
+    content: '\25BC';
+    font-size: 12px;
+    margin-right: 12px;
+    transition: transform 0.2s;
+}
+
+details[open] summary::before {
+    transform: rotate(-180deg);
+}
+
+.speaker-profile {
+    padding: 24px;
+}
+
+.speaker-profile h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: var(--cor-texto-principal);
+}
+
+.speaker-profile img {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight-text {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+/* ==========================================================================
+   Página: Localização
+   ========================================================================== */
+address {
+    font-style: normal;
+    margin-bottom: 24px;
+    line-height: 1.8;
+    padding-left: 16px;
+    border-left: 4px solid var(--cor-primaria);
+}
+
+.map-container iframe {
+    width: 100%;
+    border: none;
+    border-radius: var(--raio-borda);
+    margin-bottom: 16px;
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Alterado para 2 colunas */
+    gap: 16px;
+    list-style: none;
+    border-top: 1px solid var(--cor-borda); /* Linha divisória abaixo do título */
+    padding-top: 24px;
+}
+
+.transport-card {
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo); /* Adicionado o fundo acinzentado aos cartões */
+    padding: 24px;
+    border-radius: var(--raio-borda);
+}
+
+.transport-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: var(--cor-texto-principal);
+}
+
+.transport-card p {
+    font-size: 14px;
+    color: var(--cor-texto-suave);
+}
+
+/* ==========================================================================
+   Página: Galeria
+   ========================================================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    list-style: none;
+}
+
+.gallery-item img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    margin-top: 0;
+}
+
+/* ==========================================================================
+   Página: Inscrição e Modal (Dialogs)
+   ========================================================================== */
+.info-modal-trigger {
+    text-align: center;
+}
+
+dialog {
+    margin: auto;
+    padding: 40px;
+    border: none;
+    border-radius: var(--raio-borda);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+dialog h2 {
+    margin-bottom: 16px;
+}
+
+dialog p {
+    margin-bottom: 13px;
+    font-size: 15px;
+}
+
+.btn-close {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    padding: 8px 16px;
+    border-radius: var(--raio-borda);
+    cursor: pointer;
+    margin-top: 24px;
+    font-weight: 500;
+}
+
+/* Formulário */
+fieldset {
+    border: none;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+legend {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    margin-bottom: 24px;
+    padding: 0;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--cor-texto-principal);
+}
+
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="date"], input[type="time"], select, textarea, input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-borda);
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--cor-texto-principal);
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px var(--cor-secundaria);
+}
+
+small {
+    font-size: 13px;
+    color: var(--cor-texto-suave);
+    margin-top: 4px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    height: 42px;
+}
+
+.radio-group label, .checkbox-grid label, .checkbox-single label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    list-style: none;
+}
+
+.form-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.btn-reset {
+    padding: 12px 24px;
+    border-radius: var(--raio-borda);
+    background: none;
+    border: 1px solid var(--cor-borda);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--cor-texto-suave);
+    transition: background-color 0.2s;
+}
+
+.btn-reset:hover {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+}
+
+/* ==========================================================================
+   Página: Confirmação
+   ========================================================================== */
+.page-confirmation {
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-card {
+    text-align: center;
+    padding: 48px 32px;
+    align-items: center;
+    margin: auto;
+}
+
+.status-icon {
+    font-size: 64px;
+    color: #10b981;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.confirmation-actions {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
+footer {
+    background-color: var(--cor-header-inicio);
+    color: var(--cor-texto-suave);
+    text-align: center;
+    padding: 32px;
+    margin-top: auto;
+}
+
+footer a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer button {
+    background: none;
+    border: none;
+    color: var(--cor-secundaria);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsividade (Mobile)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .cards-grid,
+    .transport-grid,
+    .gallery-grid,
+    .form-row,
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions, .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary, .btn-reset, .btn-secondary {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    /* Permite rolagem horizontal na tabela para não quebrar layout */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portal do evento acadêmico Tech Experience 2027" />
+    <title>Tech Experience 2027 - Início</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Tech Experience 2027</h1>
+        <p>Semana de Tecnologia, Inovação e Desenvolvimento Web</p>
+        <p><time datetime="2027-03-22">22</time> a <time datetime="2027-03-26">26 de março de 2027</time></p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Início</a>
+        <a href="programacao.html">Programação</a>
+        <a href="palestrantes.html">Palestrantes</a>
+        <a href="local.html">Local</a>
+        <a href="galeria.html">Galeria</a>
+        <a href="inscricao.html">Inscrição</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Sobre o evento</h2>
+            <p>
+                O <strong>Tech Experience 2027</strong> é um evento acadêmico criado para reunir
+                estudantes, professores e profissionais interessados em tecnologia. Durante a semana,
+                os participantes poderão acompanhar palestras, oficinas e demonstrações sobre temas atuais
+                da computação.
+            </p>
+
+            <figure>
+                <img src="img/evento.jpg" alt="Palestra em uma conferência de tecnologia" />
+                <figcaption>Exemplo de conferência de tecnologia.</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h2>Temas do evento</h2>
+            <ul class="cards-grid">
+                <li>Desenvolvimento Front-End</li>
+                <li>Inteligência Artificial</li>
+                <li>Computação em Nuvem</li>
+                <li>Segurança da Informação</li>
+                <li>Experiência do Usuário (UX/UI)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Por que participar?</h2>
+            <ol class="step-list">
+                <li>Conhecer aplicações reais de tecnologia.</li>
+                <li>Conversar com profissionais da área.</li>
+                <li>Participar de oficinas práticas.</li>
+                <li>Conhecer projetos desenvolvidos por estudantes.</li>
+            </ol>
+        </section>
+
+        <aside>
+            <h2>Informação importante</h2>
+            <p>As atividades são gratuitas, porém algumas oficinas possuem número limitado de vagas.</p>
+            <p><a href="inscricao.html" class="btn-link">Faça sua inscrição antecipadamente</a></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Tech Experience 2027 &bull; <button type="button" commandfor="creditos" command="show-modal">Créditos</button></p>
+        <dialog id="creditos">
+            <h2>Créditos de Imagens</h2>
+            <section>
+                <h3>evento.jpg</h3>
+                <p><strong>Arquivo:</strong> Wikimedia Technical Conference 2019</p>
+                <p><strong>Autor:</strong> Darenwelsh (CC BY-SA 4.0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:Wikimedia_Technical_Conference_2019_-_Lets_Talk.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+
+            <section>
+                <h3>laboratorio.jpg</h3>
+                <p><strong>Arquivo:</strong> Students working in computer lab</p>
+                <p><strong>Autor:</strong> Michael Surran (CC BY-SA 2.0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:Students_working_on_class_assignment_in_computer_lab.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+
+            <section>
+                <h3>programador.jpg</h3>
+                <p><strong>Arquivo:</strong> ComputerProgrammer.jpg</p>
+                <p><strong>Origem:</strong> Pixabay / Wikimedia Commons (CC0)</p>
+                <p><a href="https://commons.wikimedia.org/wiki/File:ComputerProgrammer.jpg" target="_blank" rel="noopener">Página original no Wikimedia Commons</a></p>
+            </section>
+            <button type="button" commandfor="creditos" command="close" class="btn-close">Fechar</button>
+        </dialog>
+    </footer>
+</body>
+</html>
