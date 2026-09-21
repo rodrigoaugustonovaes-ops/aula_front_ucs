@@ -1,0 +1,670 @@
+/* ==========================================
+RESET E CONFIGURAÇÕES GERAIS
+========================================== */
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+--bg-main: #f9f6f0;
+--bg-card: #ffffff;
+--bg-quote: #ebd2c0;
+--text-color: #333333;
+--text-muted: #666666;
+--brand-brown: #823c28;
+--brand-light: #c07a68;
+--border-color: #e5dec3;
+--card-border: #e2e2e2;
+--font-serif: 'Georgia', 'Times New Roman', serif;
+--font-sans: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+background-color: var(--bg-main);
+color: var(--text-color);
+font-family: var(--font-sans);
+line-height: 1.6;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+}
+
+main {
+width: 100%;
+max-width: 800px;
+padding: 20px;
+}
+
+a {
+color: var(--brand-brown);
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* ==========================================
+CABEÇALHO E NAVEGAÇÃO
+========================================== */
+header {
+text-align: center;
+padding: 30px 20px 20px 20px;
+width: 100%;
+max-width: 800px;
+}
+
+header .slogan {
+font-size: 0.75rem;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--brand-light);
+margin-bottom: 8px;
+font-weight: 600;
+}
+
+header h1 {
+font-family: var(--font-serif);
+font-size: 2.2rem;
+color: var(--brand-brown);
+font-weight: normal;
+margin-bottom: 20px;
+}
+
+nav {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 15px 25px;
+padding-bottom: 20px;
+border-bottom: 1px solid var(--border-color);
+}
+
+nav a {
+color: #222222;
+font-size: 0.85rem;
+font-weight: 600;
+}
+
+/* ==========================================
+TÍTULOS E CATEGORIAS
+========================================== */
+.categoria {
+font-size: 0.7rem;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+color: var(--brand-light);
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+main > section > header,
+article.pagina-receita > header {
+text-align: center;
+margin-bottom: 25px;
+}
+
+main h1, main h2 {
+font-family: var(--font-serif);
+color: var(--brand-brown);
+font-weight: normal;
+}
+
+main h1 {
+font-size: 2rem;
+}
+
+main h2 {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+
+/* ==========================================
+PÁGINA INICIAL (HOME - INDEX.HTML)
+========================================== */
+#inicio {
+display: flex;
+align-items: center;
+gap: 30px;
+margin-bottom: 50px;
+}
+
+#inicio article {
+flex: 1;
+}
+
+#inicio figure {
+flex: 1;
+text-align: right;
+}
+
+#inicio figure img {
+width: 100%;
+max-width: 380px;
+border-radius: 4px;
+display: block;
+}
+
+#inicio figcaption {
+font-size: 0.75rem;
+color: var(--text-muted);
+margin-top: 5px;
+text-align: left;
+}
+
+.botao {
+display: inline-block;
+background-color: var(--brand-brown);
+color: #ffffff;
+padding: 8px 16px;
+border-radius: 3px;
+font-size: 0.85rem;
+margin-top: 15px;
+}
+
+.botao:hover {
+background-color: #6a2f1f;
+text-decoration: none;
+}
+
+#escolhas {
+margin-bottom: 50px;
+}
+
+#escolhas article {
+display: inline-block;
+width: calc(50% - 15px);
+vertical-align: top;
+margin-right: 25px;
+margin-top: 20px;
+}
+
+#escolhas article:last-child {
+margin-right: 0;
+}
+
+#escolhas figure img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 4px;
+}
+
+#escolhas figure figcaption {
+font-size: 0.75rem;
+color: var(--text-muted);
+margin: 5px 0;
+}
+
+#escolhas h3 {
+font-family: var(--font-serif);
+font-size: 1.2rem;
+color: var(--brand-brown);
+font-weight: normal;
+margin-bottom: 5px;
+}
+
+#manifesto {
+background-color: #f1e4d8;
+padding: 30px 40px;
+text-align: center;
+border-radius: 4px;
+margin-bottom: 50px;
+}
+
+#manifesto blockquote {
+font-family: var(--font-serif);
+font-size: 1.15rem;
+font-style: italic;
+color: var(--brand-brown);
+}
+
+#dicas-home {
+display: flex;
+gap: 30px;
+align-items: flex-start;
+margin-bottom: 50px;
+}
+
+#dicas-home article {
+flex: 2;
+}
+
+#dicas-home aside {
+flex: 1;
+background-color: #ffffff;
+padding: 20px;
+border-left: 3px solid var(--brand-brown);
+border-radius: 2px;
+}
+
+#dicas-home aside h3 {
+font-size: 0.95rem;
+margin-bottom: 5px;
+}
+
+#dicas-home aside p {
+font-size: 0.85rem;
+color: var(--text-muted);
+}
+
+#newsletter {
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid var(--border-color);
+}
+
+#newsletter form {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin-top: 15px;
+}
+
+#newsletter label {
+font-size: 0.85rem;
+font-weight: bold;
+}
+
+#newsletter input[type="email"] {
+padding: 8px 12px;
+border: 1px solid #ccc;
+border-radius: 3px;
+width: 250px;
+}
+
+#newsletter button {
+background-color: var(--brand-brown);
+color: #fff;
+border: none;
+padding: 8px 16px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+/* ==========================================
+PÁGINA LISTAGEM DE RECEITAS (RECEITAS.HTML)
+========================================== */
+.card-horizontal {
+background: var(--bg-card);
+border: 1px solid var(--card-border);
+border-radius: 6px;
+display: flex;
+margin-bottom: 20px;
+overflow: hidden;
+}
+
+.card-horizontal-img {
+width: 200px;
+height: 150px;
+object-fit: cover;
+}
+
+.card-horizontal-content {
+padding: 15px 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex: 1;
+}
+
+.card-horizontal-content h2 {
+font-size: 1.2rem;
+margin-bottom: 4px;
+}
+
+.card-meta {
+display: flex;
+align-items: center;
+gap: 5px;
+font-size: 0.8rem;
+color: var(--text-muted);
+margin-bottom: 8px;
+}
+
+.card-meta .material-symbols-outlined {
+font-size: 1rem;
+}
+
+.card-horizontal-content p {
+font-size: 0.85rem;
+color: var(--text-muted);
+margin-bottom: 10px;
+}
+
+.card-link {
+font-size: 0.85rem;
+font-weight: bold;
+}
+
+/* ==========================================
+PÁGINAS DE RECEITA INDIVIDUAL (BOLO / MASSA)
+========================================== */
+.pagina-receita figure {
+text-align: center;
+margin-bottom: 25px;
+}
+
+.pagina-receita figure img {
+max-width: 100%;
+max-height: 350px;
+border-radius: 4px;
+}
+
+.pagina-receita figcaption {
+font-size: 0.75rem;
+color: var(--text-muted);
+margin-top: 5px;
+}
+
+.receita-cards-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.receita-card-box {
+background: var(--bg-card);
+border: 1px solid var(--card-border);
+border-radius: 6px;
+padding: 15px 20px;
+}
+
+.info-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 10px;
+}
+
+.receita-card-icon {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+border: 1px solid #ddd;
+color: #555;
+}
+
+.receita-card-title {
+font-weight: bold;
+font-size: 0.95rem;
+display: block;
+}
+
+.receita-card-subtitle {
+font-size: 0.75rem;
+color: var(--text-muted);
+display: block;
+}
+
+.info-bar-horizontal {
+list-style: none;
+display: flex;
+gap: 20px;
+font-size: 0.8rem;
+color: var(--text-muted);
+margin-top: 5px;
+}
+
+.info-bar-item {
+display: flex;
+align-items: center;
+gap: 4px;
+}
+
+.info-bar-item .material-symbols-outlined {
+font-size: 1rem;
+}
+
+details.receita-card-box summary {
+display: flex;
+align-items: center;
+gap: 12px;
+cursor: pointer;
+list-style: none;
+}
+
+details.receita-card-box summary::-webkit-details-marker {
+display: none;
+}
+
+.receita-card-content {
+margin-top: 15px;
+padding-top: 15px;
+border-top: 1px solid #f0f0f0;
+font-size: 0.85rem;
+}
+
+.receita-card-content ul,
+.receita-card-content ol {
+padding-left: 20px;
+}
+
+.receita-card-content li {
+margin-bottom: 5px;
+}
+
+/* ==========================================
+PÁGINA DE DICAS (DICAS.HTML)
+========================================== */
+.dica-cards-container {
+display: flex;
+flex-direction: column;
+gap: 15px;
+}
+
+.dica-card-horizontal {
+background: var(--bg-card);
+border: 1px solid var(--card-border);
+border-radius: 6px;
+display: flex;
+align-items: center;
+padding: 15px 20px;
+gap: 15px;
+}
+
+.dica-card-icon-wrapper {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f7f7f7;
+width: 48px;
+height: 48px;
+border-radius: 4px;
+}
+
+.dica-card-content h2 {
+font-size: 0.95rem;
+font-weight: bold;
+margin-bottom: 2px;
+font-family: var(--font-sans);
+}
+
+.dica-card-content p {
+font-size: 0.8rem;
+color: var(--text-muted);
+}
+
+.video-card-horizontal {
+background: var(--bg-card);
+border: 1px solid var(--card-border);
+border-radius: 6px;
+padding: 20px;
+text-align: center;
+}
+
+.video-card-horizontal h2 {
+font-size: 0.9rem;
+margin-bottom: 15px;
+font-family: var(--font-sans);
+color: var(--text-color);
+}
+
+.video-card-horizontal iframe {
+width: 100%;
+max-width: 400px;
+height: 225px;
+border-radius: 4px;
+border: none;
+}
+
+/* ==========================================
+PÁGINA DE CONTATO (CONTATO.HTML)
+========================================== */
+.text-center {
+text-align: center;
+font-size: 0.85rem;
+color: var(--text-muted);
+margin-bottom: 20px;
+}
+
+form fieldset {
+border: 1px solid var(--border-color);
+padding: 20px;
+margin-bottom: 20px;
+border-radius: 2px;
+}
+
+form legend {
+font-family: var(--font-serif);
+color: var(--brand-brown);
+padding: 0 10px;
+font-size: 0.9rem;
+}
+
+form label {
+font-size: 0.85rem;
+font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+width: 100%;
+padding: 8px 10px;
+border: 1px solid #ddd;
+border-radius: 3px;
+margin-top: 5px;
+font-family: inherit;
+font-size: 0.85rem;
+background-color: #fff;
+}
+
+form textarea {
+resize: vertical;
+}
+
+form p {
+margin-bottom: 15px;
+}
+
+form p:last-child {
+margin-bottom: 0;
+}
+
+form button[type="submit"],
+form button[type="reset"] {
+background-color: var(--brand-brown);
+color: white;
+border: none;
+padding: 8px 18px;
+border-radius: 2px;
+cursor: pointer;
+font-size: 0.85rem;
+margin-right: 10px;
+}
+
+form button[type="reset"] {
+background-color: #944532;
+}
+
+/* ==========================================
+RODAPÉ
+========================================== */
+footer {
+width: 100%;
+max-width: 800px;
+border-top: 1px solid var(--border-color);
+text-align: center;
+padding: 30px 20px;
+margin-top: auto;
+font-size: 0.8rem;
+color: var(--text-muted);
+}
+
+footer p strong {
+font-family: var(--font-serif);
+font-size: 1.1rem;
+color: var(--brand-brown);
+font-weight: normal;
+}
+
+footer address {
+font-style: normal;
+margin: 8px 0;
+}
+
+/* ==========================================
+RESPONSIVIDADE (MOBILE - LAYOUT ADAPTÁVEL)
+========================================== */
+@media (max-width: 650px) {
+header h1 {
+font-size: 1.8rem;
+}
+
+nav {
+    gap: 10px 15px;
+}
+
+/* Home Layout Mobile */
+#inicio {
+    flex-direction: column;
+    text-align: left;
+}
+
+#inicio figure {
+    text-align: center;
+}
+
+#escolhas article {
+    width: 100%;
+    margin-right: 0;
+}
+
+#dicas-home {
+    flex-direction: column;
+}
+
+#newsletter form {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#newsletter input[type="email"] {
+    width: 100%;
+}
+
+/* Card de Receitas na lista */
+.card-horizontal {
+    flex-direction: column;
+}
+
+.card-horizontal-img {
+    width: 100%;
+    height: 180px;
+}
+
+/* Cards e Dicas */
+.dica-card-horizontal {
+    align-items: flex-start;
+}
